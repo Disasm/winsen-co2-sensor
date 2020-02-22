@@ -1,6 +1,6 @@
 [package]
 name = "winsen-co2-sensor"
-version = "0.0.0"
+version = "0.1.0"
 authors = ["Vadim Kaushan <admin@disasm.info>"]
 categories = ["embedded", "hardware-support", "no-std"]
 description = "Serial driver for Winsen MH-Z19 / MH-Z19B / MH-Z14 CO2 sensors"
