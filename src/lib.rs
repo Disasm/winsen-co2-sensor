@@ -8,6 +8,7 @@
 
 
 #![cfg_attr(not(feature = "std"), no_std)]
+#![cfg_attr(docsrs, feature(doc_cfg))]
 
 use embedded_hal::serial::{Read, Write};
 
@@ -209,6 +210,7 @@ impl<E, S: Read<u8, Error=E> + Write<u8, Error=E>, C: MonotonicCounter> WinsenSe
     }
 
     #[cfg(feature = "experimental")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "experimental")))]
     /// Get the sensor detection range
     pub fn get_detection_range(&mut self) -> Result<u32, Error<E>> {
         let mut buf = [0; 4];
@@ -217,6 +219,7 @@ impl<E, S: Read<u8, Error=E> + Write<u8, Error=E>, C: MonotonicCounter> WinsenSe
     }
 
     #[cfg(feature = "experimental")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "experimental")))]
     /// Perform sensor reset
     ///
     /// This command resets sensor MCU
@@ -225,6 +228,7 @@ impl<E, S: Read<u8, Error=E> + Write<u8, Error=E>, C: MonotonicCounter> WinsenSe
     }
 
     #[cfg(feature = "experimental")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "experimental")))]
     /// Get CO2 concentration bounds used for the analog output
     pub fn get_analog_bounds(&mut self) -> Result<(u16, u16), Error<E>> {
         let mut buf = [0; 4];
@@ -235,6 +239,7 @@ impl<E, S: Read<u8, Error=E> + Write<u8, Error=E>, C: MonotonicCounter> WinsenSe
     }
 
     #[cfg(feature = "experimental")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "experimental")))]
     /// Get firmware version string
     pub fn get_firmware_version(&mut self) -> Result<[u8; 4], Error<E>> {
         let mut buf = [0; 4];
