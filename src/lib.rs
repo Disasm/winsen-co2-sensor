@@ -4,7 +4,7 @@
 //!
 //! [MH-Z19B Datasheet](https://www.winsen-sensor.com/d/files/infrared-gas-sensor/mh-z19b-co2-ver1_0.pdf)
 //!
-//! [MH-Z14 Dahasheet](https://www.winsen-sensor.com/d/files/infrared-gas-sensor/mh-z14a_co2-manual-v1_01.pdf)
+//! [MH-Z14 Datasheet](https://www.winsen-sensor.com/d/files/infrared-gas-sensor/mh-z14a_co2-manual-v1_01.pdf)
 
 
 #![cfg_attr(not(feature = "std"), no_std)]
